@@ -1,0 +1,40 @@
+{
+  "name": "manojlo-ilic-portfolio",
+  "version": "1.0.0",
+  "description": "portfolio website",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start",
+    "prettier": "prettier --write .",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "Manojlo Ilic",
+  "license": "MIT",
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.8",
+    "@chakra-ui/react": "^2.2.8",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "framer-motion": "^7.2.0",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^13.0.1",
+    "next": "^12.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
+    "react-particles": "^2.2.4",
+    "react-tsparticles": "^2.3.1",
+    "rm": "^0.1.8",
+    "three": "^0.121.0",
+    "tsparticles": "^2.3.1",
+    "typewriter-effect": "^2.19.0",
+    "vanta": "^0.5.22"
+  },
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "eslint-config-next": "^12.2.5",
+    "prettier": "^2.7.1"
+  }
+}
