@@ -10,7 +10,7 @@ import {
   Stack
 } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
-import { portfolioData, agencyWork } from '../pages/works/portfolioData'
+import { portfolioData, agencyWork } from '../components/works/portfolioData'
 import Section from '../components/section'
 import Typewriter from 'typewriter-effect'
 import Link from 'next/link'
