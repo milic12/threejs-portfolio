@@ -4,7 +4,7 @@ author: 'Manojlo Ilic'
 slug: '.Net5'
 category: 'example'
 date: '2022-03-13'
-socialImage: '/../public/blog/splitTech/net.png'
+socialImage: '/blog/splitTech/net.png'
 tags:
   - .NET5
 description: Završena je konferencija za predstavljanje nove .NET 5 platforme, koja je trajala od 10. -12. studenog.

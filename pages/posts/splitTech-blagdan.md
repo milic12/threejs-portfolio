@@ -4,7 +4,7 @@ author: 'Manojlo Ilic'
 slug: 'something'
 category: 'example'
 date: '2022-03-13'
-socialImage: '/../public/blog/splitTech/blagi.png'
+socialImage: '/blog/splitTech/blagi.png'
 tags:
   - example
 description: Zivotni put jednog developera, podijeljenog po dekadama, od vremena kad se program pisao na bušenim karticama pa sve do rada na današnjim web tehnologijama.

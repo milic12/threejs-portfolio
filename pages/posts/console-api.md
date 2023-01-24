@@ -4,7 +4,7 @@ author: 'Manojlo Ilic'
 slug: 'console'
 category: 'example'
 date: '2023-01-08'
-socialImage: '/../public/blog/console-api-cover.png'
+socialImage: '/blog/console/console-api-cover.png'
 tags:
   - console api
 description: Unskippable part of debugging is of course Console API, but the thing is, have you ever checked all possibilities of it?
