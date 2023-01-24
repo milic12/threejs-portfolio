@@ -5,7 +5,7 @@ import styles from '../config/App.module.css'
 
 const LinkItem = ({ href, path, children, ...props }) => {
   const active = path === href
-  console.log('path', path)
+
   return (
     <NextLink href={href} passHref scroll={false}>
       <Link

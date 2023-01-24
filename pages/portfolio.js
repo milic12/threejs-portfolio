@@ -33,94 +33,95 @@ const Portfolio = () => (
       <Section delay={1.5}>
         <SimpleGrid columns={[1, 1, 2]} gap={12} delay={5}>
           {agencyWork.map((item, index) => (
-            <Box key={index}>
-              <Center py={12}>
-                <Box
-                  role={'group'}
-                  maxW={'330px'}
-                  w={'full'}
-                  bg={'gray.800'}
-                  boxShadow={'2xl'}
-                  rounded={'lg'}
-                  pos={'relative'}
-                  zIndex={1}
-                >
-                  <Box
-                    rounded={'lg'}
-                    mt={-12}
-                    pos={'relative'}
-                    height={'150px'}
-                    _after={{
-                      transition: 'all .3s ease',
-                      content: '""',
-                      w: 'full',
-                      h: 'full',
-                      pos: 'absolute',
-                      top: 5,
-                      left: 0,
-                      backgroundImage: `url(${item.imageUrl.src})`,
-                      filter: 'blur(15px)',
-                      zIndex: -1
-                    }}
-                    _groupHover={{
-                      _after: {
-                        filter: 'blur(20px)'
-                      }
-                    }}
-                  >
-                    <Image
+            <Link href={item.urlLink || ''} key={index}>
+              <a target="_blank">
+                <Box>
+                  <Center py={12}>
+                    <Box
+                      role={'group'}
+                      maxW={'330px'}
+                      w={'full'}
+                      bg={'gray.800'}
+                      boxShadow={'2xl'}
                       rounded={'lg'}
-                      height="100%"
-                      width="100%"
-                      objectFit={'contain'}
-                      src={item.imageUrl.src}
-                      alt={item.title}
-                    />
-                  </Box>
-                  <Stack pt={10} pb={5} align={'center'}>
-                    <Text
-                      color={'tomato'}
-                      fontSize={'sm'}
-                      textTransform={'uppercase'}
-                      px={2}
+                      pos={'relative'}
+                      zIndex={1}
                     >
-                      {item.title}
-                    </Text>
-                    <Text
-                      color={'gray.500'}
-                      fontSize={'sm'}
-                      textTransform={'none'}
-                      align={'center'}
-                      p={2}
-                    >
-                      {item?.description}
-                    </Text>
-                    <Heading
-                      fontSize={'xl'}
-                      fontFamily={'body'}
-                      fontWeight={500}
-                      pb={5}
-                    >
-                      {item.stack}
-                    </Heading>
-                    <Stack direction={'row'} align={'center'}>
-                      <Button colorScheme="blue" mr={3} disabled>
-                        Github
-                      </Button>
+                      <Box
+                        rounded={'lg'}
+                        mt={-12}
+                        pos={'relative'}
+                        height={'150px'}
+                        _after={{
+                          transition: 'all .3s ease',
+                          content: '""',
+                          w: 'full',
+                          h: 'full',
+                          pos: 'absolute',
+                          top: 5,
+                          left: 0,
+                          backgroundImage: `url(${item.imageUrl.src})`,
+                          filter: 'blur(15px)',
+                          zIndex: -1
+                        }}
+                        _groupHover={{
+                          _after: {
+                            filter: 'blur(20px)'
+                          }
+                        }}
+                      >
+                        <Image
+                          rounded={'lg'}
+                          height="100%"
+                          width="100%"
+                          objectFit={'contain'}
+                          src={item.imageUrl.src}
+                          alt={item.title}
+                        />
+                      </Box>
+                      <Stack pt={10} pb={5} align={'center'}>
+                        <Text
+                          color={'tomato'}
+                          fontSize={'sm'}
+                          textTransform={'uppercase'}
+                          px={2}
+                        >
+                          {item.title}
+                        </Text>
+                        <Text
+                          color={'gray.500'}
+                          fontSize={'sm'}
+                          textTransform={'none'}
+                          align={'center'}
+                          p={2}
+                        >
+                          {item?.description}
+                        </Text>
+                        <Heading
+                          fontSize={'xl'}
+                          fontFamily={'body'}
+                          fontWeight={500}
+                          pb={5}
+                        >
+                          {item.stack}
+                        </Heading>
+                        {/* <Stack direction={'row'} align={'center'}>
                       <Link href={item.urlLink || ''}>
                         <Button
                           colorScheme="blue"
                           ml={2}
                           disabled={item.urlLink ? false : true}
                         >
-                          Live Demo
+                          Visit
                         </Button>
                       </Link>
-                    </Stack>
-                  </Stack>
+                    </Stack> */}
+                      </Stack>
+                    </Box>
+                  </Center>
                 </Box>
-              </Center>
-            </Box>
+              </a>
+            </Link>
           ))}
         </SimpleGrid>
       </Section>
@@ -206,12 +207,24 @@ const Portfolio = () => (
                     {item?.description}
                   </Text>
                   <Stack direction={'row'} align={'center'}>
-                    <Button colorScheme="blue" mr={3}>
-                      Github
-                    </Button>
-                    <Button colorScheme="blue" disabled ml={2}>
-                      Live Demo
-                    </Button>
+                    <Link href={item.urlLinkGithub || ''}>
+                      <a target="_blank">
+                        <Button colorScheme="blue" mr={3}>
+                          Github
+                        </Button>
+                      </a>
+                    </Link>
+                    <Link href={item.urlLinkDemo || ''}>
+                      <a target="_blank">
+                        <Button
+                          colorScheme="blue"
+                          disabled={!item.urlLinkDemo}
+                          ml={2}
+                        >
+                          Live Demo
+                        </Button>
+                      </a>
+                    </Link>
                   </Stack>
                 </Stack>
               </Box>

@@ -1,0 +1,14 @@
+---
+title: 'Stvari koje trebate znati o .NET5'
+author: 'Manojlo Ilic'
+slug: '.Net5'
+category: 'example'
+date: '2022-03-13'
+socialImage: '/../public/blog/splitTech/net.png'
+tags:
+  - .NET5
+description: Završena je konferencija za predstavljanje nove .NET 5 platforme, koja je trajala od 10. -12. studenog.
+externalLink: true
+UrlLink: https://split-techcity.com/stvari-koje-trebate-znati-o-net5-manojlo-ilic
+readingTimeNumber: 3
+---

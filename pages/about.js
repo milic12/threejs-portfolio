@@ -1,8 +1,6 @@
 import {
   Container,
   Heading,
-  Box,
-  Button,
   Link,
   UnorderedList,
   ListItem,
@@ -11,10 +9,10 @@ import {
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
-import NextLink from 'next/link'
 import Typewriter from 'typewriter-effect'
 import { IoLogoLinkedin } from 'react-icons/io5'
 import { IoLogoGithub } from 'react-icons/io5'
+import { IoMailOutline } from 'react-icons/io5'
 
 const About = () => (
   <Layout title="About">
@@ -51,8 +49,16 @@ const About = () => (
           >
             <IoLogoLinkedin fontSize={'64px'} color={'tomato'} />
           </Link>
-          <Link color="tomato" href="https://github.com/milic12" isExternal>
+          <Link
+            color="tomato"
+            href="https://github.com/milic12"
+            isExternal
+            mr={10}
+          >
             <IoLogoGithub fontSize={'64px'} color={'tomato'} />
+          </Link>
+          <Link color="tomato" href="mailto:milic1289@gmail.com" isExternal>
+            <IoMailOutline fontSize={'64px'} color={'tomato'} />
           </Link>
         </Flex>
       </Section>
@@ -89,11 +95,6 @@ const About = () => (
           </ListItem>
         </UnorderedList>
         <Paragraph> </Paragraph>
-        <Box align="center" my={4}>
-          <NextLink href="/works" passHref scroll={false}>
-            <Button colorScheme="teal">My portfolio</Button>
-          </NextLink>
-        </Box>
       </Section>
     </Container>
   </Layout>

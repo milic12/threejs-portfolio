@@ -59,6 +59,19 @@ export default function PostPage({ frontmatter, content }) {
           },
           '& p:last-child': {
             padding: '0px 40px 40px 40px'
+          },
+          '& ul': {
+            padding: '0px 40px 10px 60px'
+          },
+          '& pre': {
+            padding: '0px 60px 10px 60px'
+          },
+          '& code': {
+            backgroundColor: 'grey'
+          },
+          '& p:has(img)': {
+            display: 'flex',
+            justifyContent: 'center'
           }
         }}
       ></Box>
