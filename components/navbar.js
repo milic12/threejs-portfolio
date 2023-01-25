@@ -16,8 +16,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import NavBarButtons from './buttons/NavBarButtons'
-import Image from 'next/image'
-import LogoHome from '../public/images/logo.png'
+import { MenuLogo } from './logo'
 
 const Navbar = props => {
   const { path } = props
@@ -69,12 +68,7 @@ const Navbar = props => {
               <MenuList color="tomato" backgroundColor={'grey.700'}>
                 <NextLink href="/" passHref>
                   <MenuItem as={Link}>
-                    <Image
-                      src={LogoHome}
-                      width={'35px'}
-                      height={'35px'}
-                      alt={'logo home'}
-                    />
+                    <MenuLogo />
                   </MenuItem>
                 </NextLink>
                 <NextLink href="/about" passHref>

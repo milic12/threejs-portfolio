@@ -77,7 +77,7 @@ const Fonts = ()=>react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((styled_jsx
 
 /***/ }),
 
-/***/ 3259:
+/***/ 5841:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -137,6 +137,23 @@ const Logo = ()=>{
                     src: logo,
                     width: 50,
                     height: 50,
+                    alt: "logo"
+                })
+            })
+        })
+    });
+};
+const MenuLogo = ()=>{
+    const logo = `/images/logo.png`;
+    return /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+        href: "/",
+        scroll: false,
+        children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
+            children: /*#__PURE__*/ jsx_runtime_.jsx(LogoBox, {
+                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                    src: logo,
+                    width: 35,
+                    height: 35,
                     alt: "logo"
                 })
             })
@@ -300,10 +317,7 @@ const NavBarButtons = (props)=>{
 };
 /* harmony default export */ const buttons_NavBarButtons = (NavBarButtons);
 
-;// CONCATENATED MODULE: ./public/images/logo.png
-/* harmony default export */ const images_logo = ({"src":"/_next/static/media/logo.2944bf38.png","height":180,"width":180,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAxElEQVR42mN4ney+92WSexUQN4HwqyT3Bii7CiTH8DLZvZQBO4DIfU5xLWJwT9CMDow0MPWPdq8JDueNC4zUZXBNVPyU4lrC8DPNORuowFLVL7qNwS9mOgMQmPlHuzB4xNv/SnPOYviY4lrM4JKkquIX3QdU0MrgG62r7xcdyeCRYP0z1TmH4W2yWxWDVTp/dXC4ZGBAlLxXQJRKWmCEKoNhNjdQrpLhVbJ7CQMOAJIDEVuBrs0C4hIgLgJhKDvrVbL7VgC+alJSc4bHtgAAAABJRU5ErkJggg=="});
 ;// CONCATENATED MODULE: ./components/navbar.js
-
 
 
 
@@ -392,12 +406,7 @@ const Navbar = (props)=>{
                                             passHref: true,
                                             children: /*#__PURE__*/ jsx_runtime_.jsx(react_.MenuItem, {
                                                 as: react_.Link,
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                                    src: images_logo,
-                                                    width: "35px",
-                                                    height: "35px",
-                                                    alt: "logo home"
-                                                })
+                                                children: /*#__PURE__*/ jsx_runtime_.jsx(MenuLogo, {})
                                             })
                                         }),
                                         /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
@@ -614,7 +623,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_layouts_main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3259);
+/* harmony import */ var _components_layouts_main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5841);
 /* harmony import */ var _components_fonts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5854);
 /* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6197);
 /* harmony import */ var _components_chakra__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6596);
