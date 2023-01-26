@@ -71,7 +71,7 @@ const Blog = ({ posts }) => {
               <Center py={6} key={slug}>
                 {frontmatter.externalLink === true ? (
                   <Link href={frontmatter.UrlLink}>
-                    <a onClick={() => setLoadingAnimation(true)}>
+                    <a target="_blank">
                       {loadingAnimation ? (
                         <Spinner size="xl" />
                       ) : (
@@ -86,7 +86,6 @@ const Blog = ({ posts }) => {
                         >
                           <Box
                             h={'280px'}
-                            // bg={'gray.100'}
                             bg={'gray.900'}
                             mt={-6}
                             mx={-6}
@@ -159,7 +158,6 @@ const Blog = ({ posts }) => {
                         >
                           <Box
                             h={'280px'}
-                            // bg={'gray.100'}
                             bg={'gray.900'}
                             mt={-6}
                             mx={-6}

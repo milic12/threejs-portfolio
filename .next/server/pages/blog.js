@@ -143,7 +143,7 @@ const Blog = ({ posts  })=>{
                                 children: frontmatter.externalLink === true ? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_5___default()), {
                                     href: frontmatter.UrlLink,
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
-                                        onClick: ()=>setLoadingAnimation(true),
+                                        target: "_blank",
                                         children: loadingAnimation ? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_1__.Spinner, {
                                             size: "xl"
                                         }) : /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_1__.Box, {
@@ -157,7 +157,6 @@ const Blog = ({ posts  })=>{
                                             children: [
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_1__.Box, {
                                                     h: "280px",
-                                                    // bg={'gray.100'}
                                                     bg: "gray.900",
                                                     mt: -6,
                                                     mx: -6,
@@ -236,7 +235,6 @@ const Blog = ({ posts  })=>{
                                             children: [
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_1__.Box, {
                                                     h: "280px",
-                                                    // bg={'gray.100'}
                                                     bg: "gray.900",
                                                     mt: -6,
                                                     mx: -6,
