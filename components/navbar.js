@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import NavBarButtons from './buttons/NavBarButtons'
-import { MenuLogo } from './logo'
+import { IoHome } from 'react-icons/io5'
 
 const Navbar = props => {
   const { path } = props
@@ -67,8 +67,8 @@ const Navbar = props => {
               />
               <MenuList color="tomato" backgroundColor={'grey.700'}>
                 <NextLink href="/" passHref>
-                  <MenuItem as={Link} mb="10px">
-                    <MenuLogo />
+                  <MenuItem as={Link}>
+                    <IoHome />
                   </MenuItem>
                 </NextLink>
                 <NextLink href="/about" passHref>

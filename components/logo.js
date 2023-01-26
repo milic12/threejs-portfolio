@@ -33,13 +33,4 @@ const Logo = () => {
   )
 }
 
-export const MenuLogo = () => {
-  const logo = `/images/logo.png`
-  return (
-    <LogoBox>
-      <Image src={logo} width={35} height={35} alt="menu home logo" />
-    </LogoBox>
-  )
-}
-
 export default Logo

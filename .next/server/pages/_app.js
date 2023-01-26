@@ -143,17 +143,6 @@ const Logo = ()=>{
         })
     });
 };
-const MenuLogo = ()=>{
-    const logo = `/images/logo.png`;
-    return /*#__PURE__*/ jsx_runtime_.jsx(LogoBox, {
-        children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-            src: logo,
-            width: 35,
-            height: 35,
-            alt: "menu home logo"
-        })
-    });
-};
 /* harmony default export */ const logo = (Logo);
 
 // EXTERNAL MODULE: external "@chakra-ui/react"
@@ -311,6 +300,8 @@ const NavBarButtons = (props)=>{
 };
 /* harmony default export */ const buttons_NavBarButtons = (NavBarButtons);
 
+// EXTERNAL MODULE: external "react-icons/io5"
+var io5_ = __webpack_require__(9989);
 ;// CONCATENATED MODULE: ./components/navbar.js
 
 
@@ -400,8 +391,7 @@ const Navbar = (props)=>{
                                             passHref: true,
                                             children: /*#__PURE__*/ jsx_runtime_.jsx(react_.MenuItem, {
                                                 as: react_.Link,
-                                                mb: "10px",
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx(MenuLogo, {})
+                                                children: /*#__PURE__*/ jsx_runtime_.jsx(io5_.IoHome, {})
                                             })
                                         }),
                                         /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
@@ -913,6 +903,14 @@ module.exports = require("next/head");
 
 "use strict";
 module.exports = require("react");
+
+/***/ }),
+
+/***/ 9989:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-icons/io5");
 
 /***/ }),
 

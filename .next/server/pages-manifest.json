@@ -4,8 +4,8 @@
   "/_document": "pages/_document.js",
   "/404": "pages/404.html",
   "/portfolio": "pages/portfolio.html",
-  "/": "pages/index.js",
-  "/post/[slug]": "pages/post/[slug].js",
   "/about": "pages/about.js",
+  "/post/[slug]": "pages/post/[slug].js",
+  "/": "pages/index.js",
   "/blog": "pages/blog.js"
 }
