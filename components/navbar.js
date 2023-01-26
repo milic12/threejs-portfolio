@@ -67,7 +67,7 @@ const Navbar = props => {
               />
               <MenuList color="tomato" backgroundColor={'grey.700'}>
                 <NextLink href="/" passHref>
-                  <MenuItem as={Link}>
+                  <MenuItem as={Link} mb="10px">
                     <MenuLogo />
                   </MenuItem>
                 </NextLink>

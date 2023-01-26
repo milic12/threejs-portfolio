@@ -145,18 +145,12 @@ const Logo = ()=>{
 };
 const MenuLogo = ()=>{
     const logo = `/images/logo.png`;
-    return /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
-        href: "/",
-        scroll: false,
-        children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
-            children: /*#__PURE__*/ jsx_runtime_.jsx(LogoBox, {
-                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                    src: logo,
-                    width: 35,
-                    height: 35,
-                    alt: "logo"
-                })
-            })
+    return /*#__PURE__*/ jsx_runtime_.jsx(LogoBox, {
+        children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+            src: logo,
+            width: 35,
+            height: 35,
+            alt: "menu home logo"
         })
     });
 };
@@ -406,6 +400,7 @@ const Navbar = (props)=>{
                                             passHref: true,
                                             children: /*#__PURE__*/ jsx_runtime_.jsx(react_.MenuItem, {
                                                 as: react_.Link,
+                                                mb: "10px",
                                                 children: /*#__PURE__*/ jsx_runtime_.jsx(MenuLogo, {})
                                             })
                                         }),
@@ -548,19 +543,11 @@ const Main = ({ children , router  })=>{
                         }),
                         /*#__PURE__*/ jsx_runtime_.jsx("meta", {
                             name: "description",
-                            content: "Manojlo Ilic"
+                            content: "Software engineer| Web Developer | JavaScript | NodeJS"
                         }),
                         /*#__PURE__*/ jsx_runtime_.jsx("meta", {
                             name: "author",
                             content: "Manojlo Ilic"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("meta", {
-                            name: "author",
-                            content: "craftzdog"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("link", {
-                            rel: "apple-touch-icon",
-                            href: "apple-touch-icon.png"
                         }),
                         /*#__PURE__*/ jsx_runtime_.jsx("link", {
                             rel: "shortcut icon",
@@ -577,11 +564,11 @@ const Main = ({ children , router  })=>{
                         }),
                         /*#__PURE__*/ jsx_runtime_.jsx("meta", {
                             property: "og:type",
-                            content: "website"
+                            content: "Portfolio website"
                         }),
                         /*#__PURE__*/ jsx_runtime_.jsx("meta", {
                             property: "og:image",
-                            content: "add link"
+                            content: "/images/logo.png"
                         }),
                         /*#__PURE__*/ jsx_runtime_.jsx("title", {
                             children: "Manojlo Ilic"
