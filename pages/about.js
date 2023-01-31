@@ -76,25 +76,16 @@ const About = () => (
       <Section delay={1.5}>
         <UnorderedList>
           <ListItem>
-            <b>Present -</b>{' '}
-            <Link color="tomato" href="https://tildeloop.com/">
-              TildeLoop{' '}
-            </Link>
+            <b>Present -</b> <span style={{ color: 'tomato' }}>TildeLoop </span>
           </ListItem>
           <ListItem>
-            <b>2022 -</b>{' '}
-            <Link color="tomato" href="https://agilno.com/">
-              Agilno
-            </Link>
+            <b>2022 -</b> <span style={{ color: 'tomato' }}>Agilno</span>
           </ListItem>
           <ListItem>
             <b>2021 - </b>
-            <Link color="tomato" href="https://www.blankhq.co/">
-              Blank{' '}
-            </Link>
+            <span style={{ color: 'tomato' }}>Blank </span>
           </ListItem>
         </UnorderedList>
-        <Paragraph> </Paragraph>
       </Section>
     </Container>
   </Layout>
