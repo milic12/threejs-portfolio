@@ -602,8 +602,12 @@ const pageview = (url)=>{
         });
     }
 };
-const event = ({ action , params  })=>{
-    window.gtag("event", action, params);
+const event = ({ action , category , label , value  })=>{
+    window.gtag("event", action, {
+        event_category: category,
+        event_label: label,
+        value: value
+    });
 };
 
 
@@ -626,9 +630,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_fonts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5854);
 /* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6197);
 /* harmony import */ var _components_chakra__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6596);
-/* harmony import */ var _lib_googleAnalytics__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(9485);
+/* harmony import */ var _lib_googleAnalytics__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9485);
+/* harmony import */ var next_script__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4298);
+/* harmony import */ var next_script__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_script__WEBPACK_IMPORTED_MODULE_6__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([framer_motion__WEBPACK_IMPORTED_MODULE_4__]);
 framer_motion__WEBPACK_IMPORTED_MODULE_4__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
 
 
 
@@ -641,7 +648,7 @@ if (false) {}
 function Website({ Component , pageProps , router  }) {
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
         const handleRouteChange = (url)=>{
-            _lib_googleAnalytics__WEBPACK_IMPORTED_MODULE_6__/* .pageview */ .L(url);
+            _lib_googleAnalytics__WEBPACK_IMPORTED_MODULE_7__/* .pageview */ .L(url);
         };
         router.events.on("routeChangeComplete", handleRouteChange);
         return ()=>{
@@ -650,27 +657,50 @@ function Website({ Component , pageProps , router  }) {
     }, [
         router.events
     ]);
-    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components_chakra__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
-            cookies: pageProps.cookies,
-            children: [
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_fonts__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {}),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_layouts_main__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
-                    router: router,
-                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_4__.AnimatePresence, {
-                        mode: "wait",
-                        initial: true,
-                        onExitComplete: ()=>{
-                            if (false) {}
-                        },
-                        children: /*#__PURE__*/ (0,react__WEBPACK_IMPORTED_MODULE_1__.createElement)(Component, {
-                            ...pageProps,
-                            key: router.route
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+        children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_script__WEBPACK_IMPORTED_MODULE_6___default()), {
+                id: "ga",
+                strategy: "afterInteractive",
+                src: `https://www.googletagmanager.com/gtag/js?id=${"G-YB0GMFYV5Y"}`
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_script__WEBPACK_IMPORTED_MODULE_6___default()), {
+                id: "ga-script",
+                strategy: "afterInteractive",
+                dangerouslySetInnerHTML: {
+                    __html: `
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function () {
+              dataLayer.push(arguments);
+            };
+            window.gtag('js', new Date());
+            window.gtag('config','${"G-YB0GMFYV5Y"}', {
+              page_path: window.location.pathname,
+            });
+          `
+                }
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components_chakra__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
+                cookies: pageProps.cookies,
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_fonts__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {}),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_layouts_main__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
+                        router: router,
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_4__.AnimatePresence, {
+                            mode: "wait",
+                            initial: true,
+                            onExitComplete: ()=>{
+                                if (false) {}
+                            },
+                            children: /*#__PURE__*/ (0,react__WEBPACK_IMPORTED_MODULE_1__.createElement)(Component, {
+                                ...pageProps,
+                                key: router.route
+                            })
                         })
                     })
-                })
-            ]
-        })
+                ]
+            })
+        ]
     });
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Website);
@@ -975,7 +1005,7 @@ module.exports = import("framer-motion");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [952,664,675,873,985], () => (__webpack_exec__(8510)));
+var __webpack_exports__ = __webpack_require__.X(0, [952,664,675,498,985], () => (__webpack_exec__(8510)));
 module.exports = __webpack_exports__;
 
 })();

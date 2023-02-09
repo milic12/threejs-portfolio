@@ -18,6 +18,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6859);
 /* harmony import */ var _lib_theme__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7985);
+/* harmony import */ var next_script__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4298);
+/* harmony import */ var next_script__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_script__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -29,21 +32,27 @@ class Document extends next_document__WEBPACK_IMPORTED_MODULE_2__["default"] {
             children: [
                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(next_document__WEBPACK_IMPORTED_MODULE_2__.Head, {
                     children: [
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("script", {
-                            strategy: "lazyOnload",
-                            async: true,
+                        "Global Site Tag (gtag.js) - Google Analytics",
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_script__WEBPACK_IMPORTED_MODULE_4___default()), {
+                            id: "ga",
+                            strategy: "afterInteractive",
                             src: `https://www.googletagmanager.com/gtag/js?id=${"G-YB0GMFYV5Y"}`
                         }),
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("script", {
-                            strategy: "lazyOnload",
-                            children: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${"G-YB0GMFYV5Y"}', {
-        page_path: window.location.pathname,
-        });
-    `
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_script__WEBPACK_IMPORTED_MODULE_4___default()), {
+                            id: "ga-script",
+                            strategy: "afterInteractive",
+                            dangerouslySetInnerHTML: {
+                                __html: `
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function () {
+              dataLayer.push(arguments);
+            };
+            window.gtag('js', new Date());
+            window.gtag('config','${"G-YB0GMFYV5Y"}', {
+              page_path: window.location.pathname,
+            });
+          `
+                            }
                         })
                     ]
                 }),
@@ -148,7 +157,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [952,859,985], () => (__webpack_exec__(4065)));
+var __webpack_exports__ = __webpack_require__.X(0, [952,803,985], () => (__webpack_exec__(4065)));
 module.exports = __webpack_exports__;
 
 })();

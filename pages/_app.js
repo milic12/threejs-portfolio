@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion'
 import Chakra from '../components/chakra'
 import * as ga from '../lib/googleAnalytics'
 import { useEffect } from 'react'
+import Script from 'next/script'
 
 if (typeof window !== 'undefined') {
   window.history.scrollRestoration = 'manual'
@@ -24,6 +25,29 @@ function Website({ Component, pageProps, router }) {
 
   return (
     <>
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      <Script
+        id="ga"
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+      <Script
+        id="ga-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function () {
+              dataLayer.push(arguments);
+            };
+            window.gtag('js', new Date());
+            window.gtag('config','${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+              page_path: window.location.pathname,
+            });
+          `
+        }}
+      />
+
       <Chakra cookies={pageProps.cookies}>
         <Fonts />
         <Layout router={router}>
