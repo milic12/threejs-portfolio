@@ -8,7 +8,6 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          Global Site Tag (gtag.js) - Google Analytics
           <Script
             id="ga"
             strategy="afterInteractive"

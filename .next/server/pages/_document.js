@@ -32,7 +32,6 @@ class Document extends next_document__WEBPACK_IMPORTED_MODULE_2__["default"] {
             children: [
                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(next_document__WEBPACK_IMPORTED_MODULE_2__.Head, {
                     children: [
-                        "Global Site Tag (gtag.js) - Google Analytics",
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_script__WEBPACK_IMPORTED_MODULE_4___default()), {
                             id: "ga",
                             strategy: "afterInteractive",

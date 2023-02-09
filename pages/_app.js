@@ -25,7 +25,6 @@ function Website({ Component, pageProps, router }) {
 
   return (
     <>
-      {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         id="ga"
         strategy="afterInteractive"
