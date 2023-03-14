@@ -16,6 +16,12 @@ const ParticlesBackground = dynamic(() => import('../ParticleBackground'), {
 })
 
 const Main = ({ children, router }) => {
+  console.log(
+    '%cHi here 👋 %cThis website is made with Next.js and Three.js',
+    'font-size: 18px; color: blue',
+    'font-size: 15px; color: red'
+  )
+
   return (
     <>
       <Box as="main" pb={8}>
@@ -30,7 +36,7 @@ const Main = ({ children, router }) => {
           <meta property="og:site_name" content="Manojlo Ilic" />
           <meta name="og:title" content="Manojlo Ilic" />
           <meta property="og:type" content="Portfolio website" />
-          <meta property="og:image" content="/images/logo.png" />
+          <meta property="og:image" content="/images/logo-og.png" />
           <title>Manojlo Ilic</title>
         </Head>
 

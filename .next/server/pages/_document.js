@@ -61,7 +61,16 @@ class Document extends next_document__WEBPACK_IMPORTED_MODULE_2__["default"] {
                             initialColorMode: _lib_theme__WEBPACK_IMPORTED_MODULE_3__/* ["default"].config.initialColorMode */ .Z.config.initialColorMode
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(next_document__WEBPACK_IMPORTED_MODULE_2__.Main, {}),
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(next_document__WEBPACK_IMPORTED_MODULE_2__.NextScript, {})
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(next_document__WEBPACK_IMPORTED_MODULE_2__.NextScript, {}),
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("script", {
+                            dangerouslySetInnerHTML: {
+                                __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          `
+                            }
+                        })
                     ]
                 })
             ]

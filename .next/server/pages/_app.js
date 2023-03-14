@@ -520,6 +520,7 @@ const ParticlesBackground = dynamic_default()(null, {
     loading: ()=>/*#__PURE__*/ jsx_runtime_.jsx(loader, {})
 });
 const Main = ({ children , router  })=>{
+    console.log("%cHi here \uD83D\uDC4B %cThis website is made with Next.js and Three.js", "font-size: 18px; color: blue", "font-size: 15px; color: red");
     return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
         children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(react_.Box, {
             as: "main",
