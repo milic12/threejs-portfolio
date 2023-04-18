@@ -105,17 +105,6 @@ const Portfolio = () => (
                         >
                           {item.stack}
                         </Heading>
-                        {/* <Stack direction={'row'} align={'center'}>
-                      <Link href={item.urlLink || ''}>
-                        <Button
-                          colorScheme="blue"
-                          ml={2}
-                          disabled={item.urlLink ? false : true}
-                        >
-                          Visit
-                        </Button>
-                      </Link>
-                    </Stack> */}
                       </Stack>
                     </Box>
                   </Center>
@@ -193,7 +182,7 @@ const Portfolio = () => (
                     fontSize={'2xl'}
                     fontFamily={'body'}
                     fontWeight={500}
-                    pb={5}
+                    p={5}
                   >
                     {item.stack}
                   </Heading>
@@ -209,7 +198,11 @@ const Portfolio = () => (
                   <Stack direction={'row'} align={'center'}>
                     <Link href={item.urlLinkGithub || ''}>
                       <a target="_blank">
-                        <Button colorScheme="blue" mr={3}>
+                        <Button
+                          colorScheme="blue"
+                          mr={3}
+                          disabled={!item.urlLinkGithub}
+                        >
                           Github
                         </Button>
                       </a>

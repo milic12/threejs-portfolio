@@ -2,11 +2,20 @@ import Webstore from '../../public/portfolio/webstore1.png'
 import Gvrbnik from '../../public/portfolio/gvrbnik.jpg'
 import Senn from '../../public/portfolio/senn.png'
 import OldPortfolio from '../../public/portfolio/old-portfolio.png'
+import Mapola from '../../public/portfolio/mapola.png'
 import Amptup from '../../public/agency-work/amptup.png'
 import Mydelica from '../../public/agency-work/mydelica1.png'
 import Thelowdown from '../../public/agency-work/thelowdown.png'
 
 export const portfolioData = [
+  {
+    imageUrl: Mapola,
+    imageAlt: 'Webstore',
+    title: 'Online webstore',
+    stack: 'Chakra UI, React, Next.js, Stripe, Sanity',
+    urlLinkGithub: '',
+    urlLinkDemo: 'https://mapola.hr/'
+  },
   {
     imageUrl: Webstore,
     imageAlt: 'Webstore',
