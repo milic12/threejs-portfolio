@@ -26,6 +26,8 @@ const Main = ({ children, router }) => {
     <>
       <Box as="main" pb={8}>
         <Head>
+          <title>Manojlo Ilic</title>
+          <meta name="title" content="Manojlo Ilic" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta
             name="description"
@@ -37,7 +39,6 @@ const Main = ({ children, router }) => {
           <meta name="og:title" content="Manojlo Ilic" />
           <meta property="og:type" content="Portfolio website" />
           <meta property="og:image" content="/images/logo-og.png" />
-          <title>Manojlo Ilic</title>
         </Head>
 
         <NavBar path={router.asPath} />
