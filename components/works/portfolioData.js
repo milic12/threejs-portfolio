@@ -6,6 +6,7 @@ import Mapola from '../../public/portfolio/mapola.png'
 import Amptup from '../../public/agency-work/amptup.png'
 import Mydelica from '../../public/agency-work/mydelica1.png'
 import Thelowdown from '../../public/agency-work/thelowdown.png'
+import Olympus from '../../public/agency-work/olympus.jpeg'
 
 export const portfolioData = [
   {
@@ -54,6 +55,15 @@ export const portfolioData = [
 ]
 
 export const agencyWork = [
+  {
+    imageUrl: Olympus,
+    imageAlt: 'Olympus',
+    title: 'Olympus',
+    description:
+      '"Medical endoscopes, endotherapy devices, and therapeutic energy devices"',
+    stack: 'JavaScript, React, Ant Design',
+    urlLink: 'https://www.olympus-global.com/'
+  },
   {
     imageUrl: Thelowdown,
     imageAlt: 'Thelowdown',

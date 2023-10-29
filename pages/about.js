@@ -76,7 +76,10 @@ const About = () => (
       <Section delay={1.5}>
         <UnorderedList>
           <ListItem>
-            <b>Present -</b> <span style={{ color: 'tomato' }}>TildeLoop </span>
+            <b>Present -</b> <span style={{ color: 'tomato' }}>BrainIt </span>
+          </ListItem>
+          <ListItem>
+            <b>2023</b> <span style={{ color: 'tomato' }}>TildeLoop </span>
           </ListItem>
           <ListItem>
             <b>2022 -</b> <span style={{ color: 'tomato' }}>Agilno</span>
