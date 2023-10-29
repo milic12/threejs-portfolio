@@ -79,7 +79,7 @@ const About = () => (
             <b>Present -</b> <span style={{ color: 'tomato' }}>BrainIt </span>
           </ListItem>
           <ListItem>
-            <b>2023</b> <span style={{ color: 'tomato' }}>TildeLoop </span>
+            <b>2023 -</b> <span style={{ color: 'tomato' }}>TildeLoop </span>
           </ListItem>
           <ListItem>
             <b>2022 -</b> <span style={{ color: 'tomato' }}>Agilno</span>
