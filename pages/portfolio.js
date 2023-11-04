@@ -40,6 +40,7 @@ const Portfolio = () => (
                     <Box
                       role={'group'}
                       maxW={'330px'}
+                      height={'330px'}
                       w={'full'}
                       bg={'gray.800'}
                       boxShadow={'2xl'}
@@ -130,6 +131,7 @@ const Portfolio = () => (
               <Box
                 role={'group'}
                 maxW={'330px'}
+                height={'400px'}
                 w={'full'}
                 bg={'gray.800'}
                 boxShadow={'2xl'}
@@ -195,7 +197,12 @@ const Portfolio = () => (
                   >
                     {item?.description}
                   </Text>
-                  <Stack direction={'row'} align={'center'}>
+                  <Stack
+                    direction={'row'}
+                    align={'center'}
+                    position={'absolute'}
+                    style={{ right: 0, bottom: 20, left: 60 }}
+                  >
                     <Link href={item.urlLinkGithub || ''}>
                       <a target="_blank">
                         <Button
