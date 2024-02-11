@@ -53,6 +53,10 @@ export async function getStaticProps() {
 const Blog = ({ posts }) => {
   const [loadingAnimation, setLoadingAnimation] = useState(false)
 
+  const sortBlogPostsByDate = posts.sort((a, b) => {
+    return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+  })
+
   return (
     <Layout title="Blog">
       <Container maxW="1920px">
@@ -66,157 +70,158 @@ const Blog = ({ posts }) => {
           />
         </Heading>
         <Box>
-          <Section delay={1.5}>
-            {posts.map(({ slug, frontmatter, readingTimeNumber }) => (
-              <Center py={6} key={slug}>
-                {frontmatter.externalLink === true ? (
-                  <Link href={frontmatter.UrlLink}>
-                    <a target="_blank">
-                      {loadingAnimation ? (
-                        <Spinner size="xl" />
-                      ) : (
-                        <Box
-                          maxW={'550px'}
-                          w={'full'}
-                          bg={'gray.900'}
-                          boxShadow={'2xl'}
-                          rounded={'md'}
-                          p={6}
-                          overflow={'hidden'}
-                        >
+          {loadingAnimation ? (
+            <Center py={6}>
+              <Spinner size="xl" />
+            </Center>
+          ) : (
+            <Section delay={1.5}>
+              {sortBlogPostsByDate.map(
+                ({ slug, frontmatter, readingTimeNumber }) => (
+                  <Center py={6} key={slug}>
+                    {frontmatter.externalLink === true ? (
+                      <Link href={frontmatter.UrlLink}>
+                        <a target="_blank">
                           <Box
-                            h={'280px'}
+                            maxW={'550px'}
+                            w={'full'}
                             bg={'gray.900'}
-                            mt={-6}
-                            mx={-6}
-                            mb={6}
-                            pos={'relative'}
+                            boxShadow={'2xl'}
+                            rounded={'md'}
+                            p={6}
+                            overflow={'hidden'}
                           >
-                            <Image
-                              src={frontmatter.socialImage}
-                              layout={'fill'}
-                              objectFit={'cover'}
-                              alt={frontmatter.title}
-                            />
-                          </Box>
-                          <Stack>
-                            <Text
-                              color={'tomato'}
-                              textTransform={'uppercase'}
-                              fontWeight={800}
-                              fontSize={'sm'}
-                              letterSpacing={1.1}
+                            <Box
+                              h={'280px'}
+                              bg={'gray.900'}
+                              mt={-6}
+                              mx={-6}
+                              mb={6}
+                              pos={'relative'}
                             >
-                              Blog
-                            </Text>
-                            <Heading
-                              color={'gray.100'}
-                              fontSize={'2xl'}
-                              fontFamily={'body'}
-                            >
-                              {frontmatter.title}
-                            </Heading>
-                            <Text color={'gray.500'}>
-                              {frontmatter.description}
-                            </Text>
-                          </Stack>
-                          <Stack
-                            mt={6}
-                            direction={'row'}
-                            spacing={4}
-                            align={'center'}
-                          >
-                            <Stack
-                              direction={'column'}
-                              spacing={0}
-                              fontSize={'sm'}
-                            >
-                              <Text fontWeight={600}>Manojlo Ilic</Text>
+                              <Image
+                                src={frontmatter.socialImage}
+                                layout={'fill'}
+                                objectFit={'cover'}
+                                alt={frontmatter.title}
+                              />
+                            </Box>
+                            <Stack>
+                              <Text
+                                color={'tomato'}
+                                textTransform={'uppercase'}
+                                fontWeight={800}
+                                fontSize={'sm'}
+                                letterSpacing={1.1}
+                              >
+                                Blog
+                              </Text>
+                              <Heading
+                                color={'gray.100'}
+                                fontSize={'2xl'}
+                                fontFamily={'body'}
+                              >
+                                {frontmatter.title}
+                              </Heading>
                               <Text color={'gray.500'}>
-                                {frontmatter?.readingTimeNumber} min read
+                                {frontmatter.description}
                               </Text>
                             </Stack>
-                          </Stack>
-                        </Box>
-                      )}
-                    </a>
-                  </Link>
-                ) : (
-                  <Link href={`/post/${slug}`}>
-                    <a onClick={() => setLoadingAnimation(true)}>
-                      {loadingAnimation ? (
-                        <Spinner size="xl" />
-                      ) : (
-                        <Box
-                          maxW={'550px'}
-                          w={'full'}
-                          bg={'gray.900'}
-                          boxShadow={'2xl'}
-                          rounded={'md'}
-                          p={6}
-                          overflow={'hidden'}
-                        >
-                          <Box
-                            h={'280px'}
-                            bg={'gray.900'}
-                            mt={-6}
-                            mx={-6}
-                            mb={6}
-                            pos={'relative'}
-                          >
-                            <Image
-                              src={frontmatter.socialImage}
-                              layout={'fill'}
-                              objectFit={'cover'}
-                              alt={frontmatter.title}
-                            />
-                          </Box>
-                          <Stack>
-                            <Text
-                              color={'tomato'}
-                              textTransform={'uppercase'}
-                              fontWeight={800}
-                              fontSize={'sm'}
-                              letterSpacing={1.1}
-                            >
-                              Blog
-                            </Text>
-                            <Heading
-                              color={'gray.100'}
-                              fontSize={'2xl'}
-                              fontFamily={'body'}
-                            >
-                              {frontmatter.title}
-                            </Heading>
-                            <Text color={'gray.500'}>
-                              {frontmatter.description}
-                            </Text>
-                          </Stack>
-                          <Stack
-                            mt={6}
-                            direction={'row'}
-                            spacing={4}
-                            align={'center'}
-                          >
                             <Stack
-                              direction={'column'}
-                              spacing={0}
-                              fontSize={'sm'}
+                              mt={6}
+                              direction={'row'}
+                              spacing={4}
+                              align={'center'}
                             >
-                              <Text fontWeight={600}>Manojlo Ilic</Text>
+                              <Stack
+                                direction={'column'}
+                                spacing={0}
+                                fontSize={'sm'}
+                              >
+                                <Text fontWeight={600}>Manojlo Ilic</Text>
+                                <Text color={'gray.500'}>
+                                  {frontmatter?.readingTimeNumber} min read
+                                </Text>
+                              </Stack>
+                            </Stack>
+                          </Box>
+                          {/* )} */}
+                        </a>
+                      </Link>
+                    ) : (
+                      <Link href={`/post/${slug}`}>
+                        <a onClick={() => setLoadingAnimation(true)}>
+                          <Box
+                            maxW={'550px'}
+                            w={'full'}
+                            bg={'gray.900'}
+                            boxShadow={'2xl'}
+                            rounded={'md'}
+                            p={6}
+                            overflow={'hidden'}
+                          >
+                            <Box
+                              h={'280px'}
+                              bg={'gray.900'}
+                              mt={-6}
+                              mx={-6}
+                              mb={6}
+                              pos={'relative'}
+                            >
+                              <Image
+                                src={frontmatter.socialImage}
+                                layout={'fill'}
+                                objectFit={'cover'}
+                                alt={frontmatter.title}
+                              />
+                            </Box>
+                            <Stack>
+                              <Text
+                                color={'tomato'}
+                                textTransform={'uppercase'}
+                                fontWeight={800}
+                                fontSize={'sm'}
+                                letterSpacing={1.1}
+                              >
+                                Blog
+                              </Text>
+                              <Heading
+                                color={'gray.100'}
+                                fontSize={'2xl'}
+                                fontFamily={'body'}
+                              >
+                                {frontmatter.title}
+                              </Heading>
                               <Text color={'gray.500'}>
-                                Feb 08, 2023 · {readingTimeNumber} min read
+                                {frontmatter.description}
                               </Text>
                             </Stack>
-                          </Stack>
-                        </Box>
-                      )}
-                    </a>
-                  </Link>
-                )}
-              </Center>
-            ))}
-          </Section>
+                            <Stack
+                              mt={6}
+                              direction={'row'}
+                              spacing={4}
+                              align={'center'}
+                            >
+                              <Stack
+                                direction={'column'}
+                                spacing={0}
+                                fontSize={'sm'}
+                              >
+                                <Text fontWeight={600}>Manojlo Ilic</Text>
+                                <Text color={'gray.500'}>
+                                  Feb 08, 2023 · {readingTimeNumber} min read
+                                </Text>
+                              </Stack>
+                            </Stack>
+                          </Box>
+                        </a>
+                      </Link>
+                    )}
+                  </Center>
+                )
+              )}
+            </Section>
+          )}
         </Box>
       </Container>
     </Layout>

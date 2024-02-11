@@ -2,7 +2,7 @@
 title: 'Console API'
 author: 'Manojlo Ilic'
 slug: 'console'
-category: 'example'
+category: 'blog'
 date: '2023-01-08'
 socialImage: '/blog/console/console-api-cover.png'
 tags:

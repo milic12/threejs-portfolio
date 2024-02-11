@@ -49,7 +49,24 @@ export default function PostPage({ frontmatter, content }) {
         }}
         sx={{
           '& h1': {
-            fontSize: 'revert'
+            fontSize: '2.5em',
+            fontWeight: 'bold',
+            padding: '10px 40px 0px 40px'
+          },
+          '& h2': {
+            fontSize: '2em',
+            fontWeight: 'bold',
+            padding: '10px 40px 0px 40px'
+          },
+          '& h3': {
+            fontSize: '1.5em',
+            fontWeight: 'bold',
+            padding: '10px 40px 0px 40px'
+          },
+          '& h4': {
+            fontSize: '1.2em',
+            fontWeight: 'bold',
+            padding: '10px 40px 0px 40px'
           },
           '& p:first-of-type': {
             padding: '0px 0px 0px 0px'
@@ -63,15 +80,30 @@ export default function PostPage({ frontmatter, content }) {
           '& ul': {
             padding: '0px 40px 10px 60px'
           },
-          '& pre': {
-            padding: '0px 60px 10px 60px'
-          },
+
           '& code': {
-            backgroundColor: 'grey'
+            fontFamily: 'Courier New, monospace',
+            backgroundColor: '#333',
+            color: '#fff',
+            padding: '2px 4px'
+          },
+          '& pre': {
+            padding: '0px 60px 10px 60px',
+            backgroundColor: '#333', // Dark background color
+            color: '#fff', // Text color for pre
+            padding: '10px',
+            border: '1px solid #555', // Dark border color
+            borderRadius: '4px',
+            overflow: 'auto'
           },
           '& p:has(img)': {
             display: 'flex',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            marginTop: '10px'
+          },
+          '& a': {
+            color: 'hotpink',
+            textDecoration: 'underline'
           }
         }}
       ></Box>
