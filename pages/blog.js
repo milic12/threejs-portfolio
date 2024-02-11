@@ -15,6 +15,7 @@ import { useState } from 'react'
 import Section from '../components/section'
 import Layout from '../components/layouts/article'
 import Typewriter from 'typewriter-effect'
+import { formatDate } from '../lib/helpers'
 
 export async function getStaticProps() {
   const files = fs.readdirSync('./pages/posts')
@@ -209,7 +210,8 @@ const Blog = ({ posts }) => {
                               >
                                 <Text fontWeight={600}>Manojlo Ilic</Text>
                                 <Text color={'gray.500'}>
-                                  Feb 08, 2023 · {readingTimeNumber} min read
+                                  {formatDate(frontmatter.date)} · {''}
+                                  {readingTimeNumber} min read
                                 </Text>
                               </Stack>
                             </Stack>
