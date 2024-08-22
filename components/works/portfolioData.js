@@ -45,7 +45,7 @@ export const agencyWork = [
     description:
       '"Mobile app designed to simplify operations for marinas and enhance the boating experience for owners."',
     stack: 'React Native, TypeScript',
-    urlLink: 'https://development-mapola.netlify.app/'
+    urlLink: 'https://zonewaves.netlify.app/'
   },
   {
     imageUrl: Mapola,
