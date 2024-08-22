@@ -85,6 +85,7 @@ const Portfolio = () => (
                           color={'tomato'}
                           fontSize={'sm'}
                           textTransform={'uppercase'}
+                          textAlign={'center'}
                           px={2}
                         >
                           {item.title}
@@ -94,6 +95,7 @@ const Portfolio = () => (
                           fontSize={'sm'}
                           textTransform={'none'}
                           align={'center'}
+                          textAlign={'center'}
                           p={2}
                         >
                           {item?.description}
@@ -103,6 +105,7 @@ const Portfolio = () => (
                           fontFamily={'body'}
                           fontWeight={500}
                           pb={5}
+                          textAlign={'center'}
                         >
                           {item.stack}
                         </Heading>

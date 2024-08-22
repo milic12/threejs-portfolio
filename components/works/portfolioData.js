@@ -1,22 +1,14 @@
 import Webstore from '../../public/portfolio/webstore1.png'
 import Gvrbnik from '../../public/portfolio/gvrbnik.jpg'
 import Senn from '../../public/portfolio/senn.png'
-import OldPortfolio from '../../public/portfolio/old-portfolio.png'
 import Mapola from '../../public/portfolio/mapola.png'
 import Amptup from '../../public/agency-work/amptup.png'
 import Mydelica from '../../public/agency-work/mydelica1.png'
 import Thelowdown from '../../public/agency-work/thelowdown.png'
 import Olympus from '../../public/agency-work/olympus.jpeg'
+import ZoneWaves from '../../public/agency-work/zonewaves.png'
 
 export const portfolioData = [
-  {
-    imageUrl: Mapola,
-    imageAlt: 'Webstore',
-    title: 'Online webstore',
-    stack: 'Chakra UI, React, Next.js, Stripe, Sanity',
-    urlLinkGithub: '',
-    urlLinkDemo: 'https://mapola.hr/'
-  },
   {
     imageUrl: Webstore,
     imageAlt: 'Webstore',
@@ -42,19 +34,27 @@ export const portfolioData = [
     stack: 'Qt, C++',
     urlLinkGithub: 'https://github.com/milic12/SENN-application',
     urlLinkDemo: ''
-  },
-  {
-    imageUrl: OldPortfolio,
-    imageAlt: 'old portfolio',
-    title: 'Old portfolio',
-    description: 'Old Portfolio',
-    stack: 'React, Material-UI',
-    urlLinkGithub: 'https://github.com/milic12/New-Portfolio',
-    urlLinkDemo: ''
   }
 ]
 
 export const agencyWork = [
+  {
+    imageUrl: ZoneWaves,
+    imageAlt: 'ZoneWaves',
+    title: 'ZoneWaves',
+    description:
+      '"Mobile app designed to simplify operations for marinas and enhance the boating experience for owners."',
+    stack: 'React Native, TypeScript',
+    urlLink: 'https://development-mapola.netlify.app/'
+  },
+  {
+    imageUrl: Mapola,
+    imageAlt: 'Webstore',
+    title: 'Online webstore',
+    description: '"Online store specializing in 2D and 3D wooden maps"',
+    stack: 'Chakra UI, Next.js, TypeScript, Stripe, Sanity',
+    urlLink: 'https://development-mapola.netlify.app/'
+  },
   {
     imageUrl: Olympus,
     imageAlt: 'Olympus',
@@ -88,7 +88,7 @@ export const agencyWork = [
     title: 'Maya Health',
     description:
       '"Maya Health is a psychedelic therapy software solution for researchers, providers, and participants."',
-    stack: 'React Native, Material-UI',
+    stack: 'React Native',
     urlLink: 'https://www.mayahealth.com/'
   }
 ]

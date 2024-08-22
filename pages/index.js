@@ -18,7 +18,7 @@ const Home = () => (
         </Text>
         <Typewriter
           options={{
-            strings: ['React', 'React Native', 'VueJS', 'NodeJS'],
+            strings: ['React', 'React Native', 'Next.js', 'Vue.js', 'Node.js'],
             autoStart: true,
             loop: true
           }}
