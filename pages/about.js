@@ -25,14 +25,14 @@ const PersonalAvatar = dynamic(() => import('../components/personalAvatar'), {
   loading: () => <LoadingSpinner />
 })
 
-const CrazyAvatar = dynamic(() => import('../components/crazyAvatar'), {
-  ssr: false,
-  loading: () => <LoadingSpinner />
-})
+// const CrazyAvatar = dynamic(() => import('../components/crazyAvatar'), {
+//   ssr: false,
+//   loading: () => <LoadingSpinner />
+// })
 
 const About = () => {
   // to be added for multiple avatars
-  // const [changeAvatar, setChangeAvatar] = useState(false)
+  //  const [changeAvatar, setChangeAvatar] = useState(false)
   // const [isHovered, setIsHovered] = useState(false)
 
   return (
@@ -68,7 +68,8 @@ const About = () => {
             alignItems={'center'}
             position={'relative'}
           >
-            {!changeAvatar ? <PersonalAvatar /> : <CrazyAvatar />}
+            <PersonalAvatar />
+            {/* {!changeAvatar ? <PersonalAvatar /> : <CrazyAvatar />} */}
             {/* <Flex
               gap={2}
               style={{
