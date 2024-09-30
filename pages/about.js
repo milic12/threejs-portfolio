@@ -5,8 +5,8 @@ import {
   UnorderedList,
   ListItem,
   Flex,
-  Box,
-  Button
+  Box
+  // Button
 } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
@@ -17,7 +17,7 @@ import { IoLogoGithub } from 'react-icons/io5'
 import { IoMailOutline } from 'react-icons/io5'
 import dynamic from 'next/dynamic'
 
-import { useState } from 'react'
+// import { useState } from 'react'
 import { LoadingSpinner } from '../components/aboutPageLoader'
 
 const PersonalAvatar = dynamic(() => import('../components/personalAvatar'), {
@@ -31,8 +31,9 @@ const CrazyAvatar = dynamic(() => import('../components/crazyAvatar'), {
 })
 
 const About = () => {
-  const [changeAvatar, setChangeAvatar] = useState(false)
-  const [isHovered, setIsHovered] = useState(false)
+  // to be added for multiple avatars
+  // const [changeAvatar, setChangeAvatar] = useState(false)
+  // const [isHovered, setIsHovered] = useState(false)
 
   return (
     <Layout title="About">

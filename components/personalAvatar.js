@@ -4,10 +4,6 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../lib/loadGLTFAvatar'
 
-function easeOutCirc(x) {
-  return Math.sqrt(1 - Math.pow(x - 1, 4))
-}
-
 const PersonalAvatar = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
