@@ -156,18 +156,18 @@ const About = () => {
         <Section delay={1.5}>
           <UnorderedList>
             <ListItem>
-              <b>Present -</b>
+              <b>Present - </b>
               <span style={{ color: 'tomato' }}>GravityVector </span>
             </ListItem>
             <ListItem>
-              <b>2023/2024 -</b>{' '}
+              <b>2023/2024 - </b>{' '}
               <span style={{ color: 'tomato' }}>BrainIt </span>
             </ListItem>
             <ListItem>
-              <b>2023 -</b> <span style={{ color: 'tomato' }}>TildeLoop </span>
+              <b>2023 - </b> <span style={{ color: 'tomato' }}>TildeLoop </span>
             </ListItem>
             <ListItem>
-              <b>2022 -</b> <span style={{ color: 'tomato' }}>Agilno</span>
+              <b>2022 - </b> <span style={{ color: 'tomato' }}>Agilno</span>
             </ListItem>
             <ListItem>
               <b>2021 - </b>
