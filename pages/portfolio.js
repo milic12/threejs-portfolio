@@ -4,13 +4,12 @@ import {
   SimpleGrid,
   Box,
   Image,
-  Button,
   Center,
   Text,
   Stack
 } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
-import { portfolioData, agencyWork } from '../components/works/portfolioData'
+import { agencyWork } from '../components/works/portfolioData'
 import Section from '../components/section'
 import Typewriter from 'typewriter-effect'
 import Link from 'next/link'
@@ -118,7 +117,7 @@ const Portfolio = () => (
           ))}
         </SimpleGrid>
       </Section>
-      <Heading as="h4" fontSize={18} mb={4}>
+      {/* <Heading as="h4" fontSize={18} mb={4}>
         <Typewriter
           options={{
             strings: 'Personal Portfolio:',
@@ -234,7 +233,7 @@ const Portfolio = () => (
             </Center>
           </Box>
         ))}
-      </SimpleGrid>
+      </SimpleGrid> */}
     </Container>
   </Layout>
 )
